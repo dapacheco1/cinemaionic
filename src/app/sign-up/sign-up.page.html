@@ -1,0 +1,41 @@
+<ion-content class="ion-padding">
+<!-- greets and banner -->
+<ion-grid>
+  <ion-row>
+    <ion-col>
+      <div class="ion-text-center">
+        <h3 class="bold">Formulario de Registro</h3>
+      </div>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+  <form [formGroup]="loginForm">
+    <ion-grid>
+      <!-- username input -->
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-input formControlName="username" placeholder="Ingrese el nombre de usuario"></ion-input>
+          </ion-item>
+          <app-forms *ngIf="loginForm.controls['username']?.touched && loginForm.hasError('required','username')" fieldName="'usuario'"></app-forms>
+        </ion-col>
+      </ion-row>
+      <!-- password input -->
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-input type="password" formControlName="password" placeholder="Ingrese la contraseña"></ion-input>
+          </ion-item>
+          <app-forms *ngIf="loginForm.controls['password']?.touched && loginForm.hasError('required','password')" fieldName="'contraseña'"></app-forms>
+        </ion-col>
+      </ion-row>
+      <!-- login buttons -->
+      <ion-row>
+        <ion-col>
+          <ion-button expand="full" color="primary">Crear cuenta</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+  
+</ion-content>

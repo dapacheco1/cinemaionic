@@ -1,0 +1,60 @@
+<ion-content class="ion-padding">
+  <!-- greets and banner -->
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div class="ion-text-center">
+          <h1 class="bold">MIS CINES</h1>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <img 
+        src="https://es.parisinfo.com/var/otcp/sites/images/node_43/node_51/node_7112/salle-de-cin%C3%A9ma-%7C-630x405-%7C-%C2%A9-fotolia-he2/12344768-1-fre-FR/Salle-de-cin%C3%A9ma-%7C-630x405-%7C-%C2%A9-Fotolia-he2.jpg" alt="">
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="ion-text-center">
+          <h3 class="bold">Inicio de Sesion</h3>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <form [formGroup]="loginForm">
+    <ion-grid>
+      <!-- username input -->
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-input formControlName="username" placeholder="Ingrese el nombre de usuario"></ion-input>
+          </ion-item>
+          <app-forms *ngIf="loginForm.controls['username']?.touched && loginForm.hasError('required','username')" fieldName="'usuario'"></app-forms>
+        </ion-col>
+      </ion-row>
+      <!-- password input -->
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-input type="password" formControlName="password" placeholder="Ingrese la contraseña"></ion-input>
+          </ion-item>
+          <app-forms *ngIf="loginForm.controls['password']?.touched && loginForm.hasError('required','password')" fieldName="'contraseña'"></app-forms>
+        </ion-col>
+      </ion-row>
+      <!-- login buttons -->
+      <ion-row>
+        <ion-col>
+          <ion-button expand="full" color="primary">Iniciar Sesión</ion-button>
+        </ion-col>
+      </ion-row>
+      <!-- register button -->
+      <ion-row>
+        <ion-col>
+          <a routerLink="/sign-up" class="secondary">Crear una cuenta nueva</a>        
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+  
+</ion-content>
