@@ -7,7 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { SignUpPageRoutingModule } from './sign-up-routing.module';
 
 import { SignUpPage } from './sign-up.page';
-import { FormsComponent } from '../utils/forms/forms.component';
+import { FormsErrorPageModule } from '../utils/forms-error/forms-error.module';
 
 @NgModule({
   imports: [
@@ -15,8 +15,9 @@ import { FormsComponent } from '../utils/forms/forms.component';
     FormsModule,
     ReactiveFormsModule,
     IonicModule,
-    SignUpPageRoutingModule
+    SignUpPageRoutingModule,
+    FormsErrorPageModule
   ],
-  declarations: [SignUpPage,FormsComponent]
+  declarations: [SignUpPage],
 })
 export class SignUpPageModule {}
