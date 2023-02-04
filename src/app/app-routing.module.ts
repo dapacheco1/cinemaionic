@@ -18,6 +18,10 @@ const routes: Routes = [
   {
     path: 'sign-up',
     loadChildren: () => import('./sign-up/sign-up.module').then( m => m.SignUpPageModule)
+  },
+  {
+    path: 'forms-error',
+    loadChildren: () => import('./utils/forms-error/forms-error.module').then( m => m.FormsErrorPageModule)
   }
 ];
 

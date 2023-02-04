@@ -1,11 +1,11 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-forms',
-  templateUrl: './forms.component.html',
-  styleUrls: ['./forms.component.scss'],
+  selector: 'app-forms-error',
+  templateUrl: './forms-error.page.html',
+  styleUrls: ['./forms-error.page.scss'],
 })
-export class FormsComponent implements OnInit {
+export class FormsErrorPage implements OnInit {
 
   //ui variables
   @Input() fieldName:string='';
@@ -13,5 +13,6 @@ export class FormsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {}
+
 
 }
